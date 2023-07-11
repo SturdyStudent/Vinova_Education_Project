@@ -1,0 +1,388 @@
+.distant-top{
+    margin-top: 30px;
+}
+.input-title{
+    margin-bottom: 9px;
+}
+#summary-title{
+    color: var(--main-blue, #1F3684);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.flex-input{
+    display: flex;
+    color: var(--main-blue, #1F3684);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.flex-input input:not(.full-input), .flex-input select{
+    width: 100%;
+}
+
+.flex-input > div:nth-child(1){
+    padding-right: 10px;
+}
+.fund-input{
+    height: 39px;
+    border: none;
+    border-bottom: 1px solid #1F3684;
+    background-color: var(--sub-light-grey, #F5F5F5);
+    padding-left:15px;
+    box-sizing: border-box;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url("assets/img/CalendarBlank.png") no-repeat;
+    padding: 8px 10px 8px 16px;
+}
+
+.full-input{
+    width: 100%;
+}
+.select-language:not(.currency-select) {
+    /* remove default dropdown icon */
+    appearance:none;
+    -webkit-appearance:none; /* safari and chrome */
+    -moz-appearance:none; /* Mozilla */
+    -ms-appearance:none; /* Ie */
+    background-position: calc(100% - 12px) center !important;
+    background: url("assets/img/CaretDownWhite.png") no-repeat;
+    background-color:#57679d ;
+    padding: 8px 32px 8px 16px;
+}
+
+.fund-input::after{
+    display: none !important;
+}
+#summary-info{
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+#summary-info div div:nth-child(2){
+    text-align: right;
+}
+#summary-info div{
+    color: var(--main-black, #2D2E33);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 12;
+}
+#summary-info div div.total{
+    color: var(--main-black, #2D2E33);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.space-between{
+    justify-content: space-between;
+}
+#transfer-sum{
+    flex-shrink: 0;
+    align-items: center;
+    padding:17px 22px;
+    display: flex;
+    justify-content: space-between;
+    background: var(--sub-light-gold, #F9F3ED);
+}
+.summary-card-item{
+    display: flex;
+    justify-content: space-between;
+    padding:0 22px;
+    padding-bottom: 13px;
+}
+
+@media only screen and (min-width: 414px) {
+    /* For mobile: */
+
+    #hamburger{
+        display: block;
+        cursor: pointer;
+        align-items: center;
+        position: absolute;
+        right: 30px;
+    }
+
+    #close-menu{
+        position: absolute;
+        display: flex;
+        right: 0px;
+        top: 13px;
+        text-align: right;
+    }
+    #toggle-open{
+        position: absolute;
+        right: 0;
+    }
+    #toggle-open{
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        right: 20px;
+        z-index: 100;
+        top: 25px;
+        opacity: 0;
+    }
+
+    #summary-info{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+    .fund-note{
+        width: 100%;
+    }
+    .flex-input{
+        flex-direction: column;
+    }
+    .flex-input > div{
+        width: 100%;
+    }
+    .flex-input > div:not(:nth-child(1)){
+        margin-top: 21px;
+    }
+    #title-panel{
+        padding: 22px 30px;
+    }
+    .body-wrapper{
+        padding: 0 30px;
+    }
+    #submit-btn{
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    /* For tablet: */
+
+    .flex-input > div{
+        margin-top: 0px !important; 
+    }
+    .flex-input{
+        flex-direction: row;
+    }
+    .full-width{
+        width: 66.6666% !important;
+    }
+    .flex-input > div:not(.full-width){
+        width: 33.3333%;
+        gap: 10rem;
+    }
+    #title-panel{
+        padding: 22px 60px;
+    }
+    .body-wrapper{
+        padding: 0 60px;
+    }
+    .fund-note{
+        width: 800px;
+    }
+    #hamburger{
+        display: none;
+    }
+    #summary-info{
+        width: 400px;
+    }
+    .flex-input > div:nth-child(3){
+        padding-left: 10px;
+    }
+    #submit-btn{
+        width: unset;
+        margin-left: 0;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    /* For desktop: */
+    #title-panel{
+        padding: 22px 171px;
+    }
+    .body-wrapper{
+        padding: 0 171px;
+    }
+}
+
+
+#title-panel{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--sub-light-gold, #F9F3ED);
+}
+#title-panel > div:nth-child(1){
+    color: var(--main-blue, #1F3684);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#title-panel div:nth-child(2){
+    display: flex;
+    gap: 10px;
+}
+#title-panel div:nth-child(2) button{
+    display: flex;
+    padding: 17px 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--main-blue, #1F3684);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 30px;
+    border: 0.5px solid var(--main-blue, #1F3684);
+}
+#wallet-nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 62px;
+    align-items: flex-end;
+}
+#wallet-nav > div:nth-child(1){
+    color: var(--main-blue, #1F3684);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    gap: 37px;
+}
+.select{
+    /* remove default dropdown icon */
+    appearance:none;
+    -webkit-appearance:none; /* safari and chrome */
+    -moz-appearance:none; /* Mozilla */
+    -ms-appearance:none; /* Ie */
+    background-position: calc(100% - 12px) center !important;
+    background: url("assets/img/CaretDown.png") no-repeat;
+    background-color: #f5f5f5;
+    padding: 8px 32px 8px 16px;
+}
+#wallet-nav div select{
+    display: flex;
+    width: 144px;
+    padding: 10px 30px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 0.5px solid var(--main-blue, #1F3684);
+    color: var(--main-blue, #1F3684);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#wallet-nav button:hover{
+    background: var(--main-blue, #1F3684);
+    color: white;
+    cursor: pointer;
+}
+#body-wrapper{
+    padding: 0 171px;
+}
+
+#fund-wallet tr td:nth-child(1){
+    background: #f5f5f5;
+}
+
+#fund-wallet{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 1px solid #3e3f44;
+    border-bottom: 1px solid #3e3f44;
+    margin-top: 25px;
+    stroke-width: 0.5px;
+    stroke: var(--main-black, #2D2E33);
+}
+
+#fund-amount td div{
+    color: var(--main-blue, #1F3684);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-style: hidden;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    color: var(--main-blue, #1F3684);
+    font-size: 25px;
+}
+
+#wallet-name td{
+    padding-top: 37px;
+}
+#order-table tr th:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+}
+#order-table tr td:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+}
+#pagination-parent{
+    display: flex;
+    justify-content: center;
+}
+#pagination {
+    width: 200px;
+    justify-content: space-between;
+    display:flex;
+    color: var(--main-blue, #1F3684);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    margin-bottom: 105px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#pagination div div:not(.currentPage){
+    opacity: 0.4000000059604645;
+}
+.currentPage{
+    color: var(--main-blue, #1F3684);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.fund-note{
+    color: var(--main-black, #2D2E33);
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-btn{
+    margin-top: 30px;
+    display: flex;
+    padding: 17px 30px;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    gap: 30px;
+    border-radius: 30px;
+    background-color: transparent;
+    border: none;
+    background: var(--main-blue, #1F3684);
+}

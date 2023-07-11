@@ -1,0 +1,404 @@
+.currency-select{
+    background-color: transparent;
+    appearance:none;
+    -webkit-appearance:none; 
+    -moz-appearance:none; 
+    -ms-appearance:none; 
+    background-position: calc(100% - 12px) center !important;
+    background: url("assets/img/CaretDown.png") no-repeat;
+    padding: 8px 32px 8px 16px;
+}
+
+#title-panel{
+    padding: 22px 171px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--sub-light-gold, #F9F3ED);
+}
+#title-panel > div:nth-child(1){
+    color: var(--main-blue, #1F3684);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#title-panel div:nth-child(2) button{
+    padding: 17px 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--main-blue, #1F3684);
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 30px;
+    border: 0.5px solid var(--main-blue, #1F3684);
+}
+#wallet-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#wallet-nav > div:nth-child(1){
+    color: var(--main-blue, #1F3684);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    gap: 37px;
+}
+#wallet-nav div select{
+    display: flex;
+    width: 144px;
+    padding: 10px 30px;
+    padding-right: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 0.5px solid var(--main-blue, #1F3684);
+    color: var(--main-blue, #1F3684);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+#wallet-nav button:hover{
+    background: var(--main-blue, #1F3684);
+    color: white;
+    cursor: pointer;
+}
+
+
+#fund-wallet tr td:nth-child(1){
+    background: #f5f5f5;
+}
+
+#fund-wallet{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-top: 1px solid #3e3f44;
+    border-bottom: 1px solid #3e3f44;
+    margin-top: 25px;
+    stroke-width: 0.5px;
+    stroke: var(--main-black, #2D2E33);
+}
+
+#fund-amount td div{
+    color: var(--main-blue, #1F3684);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-style: hidden;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    color: var(--main-blue, #1F3684);
+    font-size: 25px;
+}
+
+#wallet-name td{
+    padding-top: 37px;
+}
+#order-table tbody{
+    width: 100%;
+}
+#order-table{
+    width: 100%;
+    margin-top: 43px;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    color: var(--main-black, #2D2E33);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#order-table tr, tbody,thead like this table,thead,tbody,tr{
+    width: 100%;
+}
+#order-table tr:nth-child(1){
+    color: #1F3684;
+    text-align: left;
+    padding: 15px 25px;
+    border-bottom: 1px solid black;
+}
+#order-table tr th:nth-child(1), #order-table tr td:nth-child(1){
+    width: 20%;
+    padding: 12px;
+    padding-left: 25px ;
+}
+#order-table tr th:nth-child(1) div, #order-table tr td:nth-child(1) div{
+    display: flex;
+    justify-content: space-between;
+}
+#order-table tr th:nth-child(2), #order-table tr td:nth-child(2){
+    width: 15%;
+}
+#order-table tr th:nth-child(3), #order-table tr td:nth-child(3){
+    width: 10%;
+}
+#order-table tr th:nth-child(4), #order-table tr td:nth-child(4){
+    width: 10%;
+}
+#order-table tr th:nth-child(5), #order-table tr td:nth-child(5){
+    width: 30%;
+}
+#order-table tr th:nth-child(6), #order-table tr td:nth-child(6){
+    width: 25%;
+}
+#order-table tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+#order-table tr:nth-child(1) {
+    background-color: transparent;
+}
+
+#pagination-parent{
+    display: flex;
+    justify-content: center;
+}
+.select-language:not(.currency-select) {
+    /* remove default dropdown icon */
+    appearance:none;
+    -webkit-appearance:none; /* safari and chrome */
+    -moz-appearance:none; /* Mozilla */
+    -ms-appearance:none; /* Ie */
+    background-position: calc(100% - 12px) center !important;
+    background: url("assets/img/CaretDownWhite.png") no-repeat;
+    background-color:var(--sub-light-grey, #F5F5F5) ;
+    background-color:#57679d ;
+    padding: 8px 32px 8px 16px;
+}
+#pagination {
+    width: 200px;
+    justify-content: space-between;
+    display:flex;
+    color: var(--main-blue, #1F3684);
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 105px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#pagination div div:not(.currentPage){
+    opacity: 0.4;
+}
+.currentPage{
+    color: var(--main-blue, #1F3684);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+@media only screen and (min-width: 414px) {
+    /* For mobile: */
+
+    #hamburger{
+        display: block;
+        cursor: pointer;
+        align-items: center;
+        position: absolute;
+        right: 30px;
+    }
+
+    #close-menu{
+        position: absolute;
+        display: flex;
+        right: 0px;
+        top: 13px;
+        text-align: right;
+    }
+    #title-panel > div:nth-child(1) {
+        margin-bottom: 32px;
+    }
+    #title-panel div:nth-child(2) button{
+        width: 174px;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+
+
+    #summary-info{
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 50px;
+    }
+    #title-panel{
+        flex-direction: column;
+    }
+    .fund-note{
+        width: 100%;
+    }
+
+    .flex-input{
+        flex-direction: column;
+    }
+    .flex-input > div{
+        width: 100%;
+    }
+    .flex-input > div:not(:nth-child(1)){
+        margin-top: 21px;
+    }
+    #title-panel{
+        padding: 22px 30px;
+    }
+    .body-wrapper{
+        padding: 0 30px;
+    }
+    #submit-btn{
+        width: 85%;
+        margin: 0 auto;
+    }
+    #title-panel div:nth-child(2) {
+        display: inline;
+        gap: 12px;
+    }
+    #title-panel div:nth-child(2) button:nth-child(3){
+        display: block;
+    }
+    #mobile-order-table{
+        display: block;
+    }
+    #mobile-order-table > div:nth-child(even){
+        background-color: #f5f5f5;
+    }
+    #order-table{
+        display:none;
+    }
+    .mobile-table-item{
+        display: flex;
+        justify-content: space-between;
+        padding: 17px;
+    }
+    .mobile-table-item > div > div:nth-child(1){
+        color: var(--main-black, #2D2E33);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 7px;
+    }
+    .mobile-table-item > div:nth-child(2){
+        text-align: right;
+    }
+    .mobile-table-item > div > div:nth-child(3){
+        margin-top: 11px;
+    }
+    #wallet-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 35px;
+    }
+    #wallet-nav > div:nth-child(2){
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 28px;
+    }
+    .sort-select{
+        width: 200px !important;
+        background-color: transparent;
+        appearance:none;
+        -webkit-appearance:none; 
+        -moz-appearance:none; 
+        -ms-appearance:none; 
+        background-position: calc(100% - 12px) center !important;
+        background: url("assets/img/CaretDown.png") no-repeat;
+        padding: 8px 32px 8px 16px;
+    }
+    #pagination {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    /* For tablet: */
+
+    #mobile-order-table{
+        display: none;
+    }
+    #title-panel{
+        flex-direction: row;
+    }
+    #title-panel div:nth-child(1){
+        margin-bottom: 0;
+    }
+    #order-table{
+        display: inline-table;
+    }
+
+    .sort-select{
+        display: none !important;
+    }
+    #wallet-nav{
+        flex-direction: row;
+        align-items: center;
+    }
+    #wallet-nav > div:nth-child(2){
+        width: unset;
+    }
+    #title-panel div:nth-child(2){
+        display: flex;
+        gap: 10px;
+    } 
+    .flex-input > div{
+        margin-top: 0px !important; 
+    }
+
+    .flex-input{
+        flex-direction: row;
+    }
+    .full-width{
+        width: 66.6666% !important;
+    }
+    .flex-input > div:not(.full-width){
+        width: 33.3333%;
+        gap: 10rem;
+    }
+    #title-panel{
+        padding: 22px 60px;
+    }
+    .body-wrapper{
+        padding: 0 60px;
+    }
+    .fund-note{
+        width: 800px;
+    }
+    #hamburger{
+        display: none;
+    }
+    #summary-info{
+        width: 400px;
+    }
+    .flex-input > div:nth-child(3){
+        padding-left: 10px;
+    }
+    #submit-btn{
+        width: unset;
+        margin-left: 0;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    /* For desktop: */
+    #title-panel{
+        padding: 22px 171px;
+    }
+    .body-wrapper{
+        padding: 0 171px;
+    }
+}
