@@ -174,7 +174,6 @@ footer option{
 #fund-wallet{
     width: 100%;
     text-align: center;
-    border-collapse: collapse;
     border-top: 1px solid #3e3f44;
     border-bottom: 1px solid #3e3f44;
     margin-top: 25px;
@@ -201,11 +200,8 @@ footer option{
 #fund-wallet > div{
     padding-top: 37px;
 }
-.view-detail-btn {
-    border-style: none;
-    padding: 0;
-}
 .view-detail-btn{
+    border-style: none;
     display: flex;
     padding: 17px 30px;
     margin: 0px auto;
@@ -431,6 +427,7 @@ footer option{
     }
     #fund-wallet > div{
         width: 100%;
+        text-align: center;
     }
     #mobile-order-table > div:nth-child(even){
         background-color: #f5f5f5;
@@ -520,7 +517,6 @@ footer option{
         margin-top: 0px;
     }
     .select-language{
-        width: unset;
         margin-bottom: 0px;
         width: 168px;
     }
