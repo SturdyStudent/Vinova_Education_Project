@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { Box, Input, Typography, Container, Divider, Hidden } from '@mui/material'
+import { Box, Input, Typography, Divider} from '@mui/material'
 import caretDown from '../../assets/img/CaretDown.png'
 import { makeStyles } from '@mui/styles'
 

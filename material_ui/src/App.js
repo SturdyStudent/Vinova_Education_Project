@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Dashboard from './pages/Dashboard/Index'
 import MyTransaction from './pages/MyTransaction'
 import SendFund from './pages/SendFunds'
+import { Route, BrowserRouter as Router, Routes, } from 'react-router-dom'
 
 const theme = createTheme( {
   palette: {
@@ -35,9 +36,13 @@ const theme = createTheme( {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <SendFund />
-      </div>
+      <Router>
+        <Routes>
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/sendFund' element={<SendFund />} />
+          <Route path='/myTransaction' element={<MyTransaction />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }

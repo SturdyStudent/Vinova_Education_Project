@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-import {AppBar, Toolbar, Box, Button, IconButton, Icon, Hidden, Drawer, Divider} from '@mui/material'
+import {AppBar, Toolbar, Box, IconButton, Hidden, Drawer} from '@mui/material'
 import Logo from '../assets/img/main_logo.png'
-import { useTheme } from '@emotion/react'
 import { makeStyles } from '@mui/styles';
 import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
@@ -9,7 +8,6 @@ import CloseIcon from '@mui/icons-material/Close'
 function Header() {
     const [openNavbar, setOpenNavbar] = useState();
 
-    const theme = useTheme();
     const useStyles = makeStyles(theme => ({
         headerHolder: {
             height: 'auto',
