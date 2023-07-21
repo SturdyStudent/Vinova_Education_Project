@@ -1,5 +1,5 @@
    <svg
-            class="text-white bg-purple-700 absolute bottom-0 right-0 pointer-events-none p-2 rounded"
+            class="text-mainBlue bg-purple-700 absolute bottom-0 right-0 pointer-events-none p-2 rounded"
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
             width="40px"
@@ -18,7 +18,7 @@
               <g
                 id="ZahnhelferDE–Icon&amp;Asset-Download"
                 transform="translate(-539.000000, -199.000000)"
-                fill="#ffffff"
+                fill="#1F3684"
                 fill-rule="nonzero"
               >
                 <g

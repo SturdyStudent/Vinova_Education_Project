@@ -1,8 +1,8 @@
 import { makeStyles } from '@mui/styles'
 import React from 'react'
-import footerLogo from '../assets/img/footer_logo.png'
-import { Box, Typography } from '@mui/material'
-import caretDown from '../assets/img/CaretDown.png'
+import footerLogo from '../../assets/img/footer_logo.png'
+import { Box, Select, Typography, MenuItem } from '@mui/material'
+import caretDown from '../../assets/img/CaretDownWhite.png'
 
 function Footer() {
     const useStyle = makeStyles((theme) => ({
@@ -40,12 +40,10 @@ function Footer() {
         languageSelect: {
             backgroundColor: '#57679d',
             width: '168px',
-            color: 'white',
-            padding: '13px 0px 14px 15px',
+            color: 'white !important',
+            paddingRight: '15px',
             paddingLeft: '15px',
-            appearance: 'none',
             backgroundPosition: `calc(100% - 12px) center !important`,
-            background: `url(${caretDown}) no-repeat`,
             [theme.breakpoints.down('md')]: {
                 width: '85%',
                 marginBottom: '72px',
@@ -56,9 +54,16 @@ function Footer() {
     const classes = useStyle();
         return (
             <div className={classes.footer}>
-                <select class="select-language" className={classes.languageSelect}>
-                    <option>English</option> 
-                </select>
+                <Select
+                  defaultValue={'english'}
+                  IconComponent={() => <img src={caretDown} alt='' />}
+                  className={classes.languageSelect}
+                  sx={{
+                    width: 240,
+                  }}
+                >
+                    <MenuItem value={'english'}>English</MenuItem> 
+                </Select>
                 <Box className={classes.logoHolder}>
                     <div>
                         <img src={footerLogo} alt='' />

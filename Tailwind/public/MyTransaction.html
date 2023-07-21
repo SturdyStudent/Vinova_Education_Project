@@ -5,7 +5,7 @@
     <link href="../dist/output.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>My Transaction</title>
     <script src="./toggleNavbar.js"></script>
   </head>
   <body>
@@ -109,16 +109,28 @@
             <div>Crypto</div>
           </div>
           <div class="flex justify-between mt-6 mb-6 md:0">
-            <select
-              class="select sort-select w-52 md:w-44 py-2 pl-7 pr-2 gap-8 rounded-3xl border border-mainBlue text-mainBlue md:hidden"
-            >
-              <option>Sort Order Date</option>
-            </select>
-            <select
-              class="select sort-select w-32 py-2 pl-7 pr-2 gap-8 rounded-3xl border border-mainBlue text-mainBlue"
-            >
-              <option>EUR</option>
-            </select>
+            <div class="relative inline-flex self-center">
+              <img
+                src="../assets/icons/caretDownBlue.svg"
+                class="absolute right-0 top-1 p-2 w-9 text-mainBlue"
+              />
+              <select
+                class="select sort-select w-52 md:w-44 py-2 pl-7 pr-2 gap-8 rounded-3xl border border-mainBlue text-mainBlue md:hidden appearance-none"
+              >
+                <option>Sort Order Date</option>
+              </select>
+            </div>
+            <div class="relative inline-flex self-center">
+              <img
+                src="../assets/icons/caretDownBlue.svg"
+                class="absolute right-0 top-1 p-2 w-9"
+              />
+              <select
+                class="select sort-select w-32 py-2 pl-7 pr-2 gap-8 rounded-3xl border border-mainBlue text-mainBlue appearance-none"
+              >
+                <option>EUR</option>
+              </select>
+            </div>
           </div>
         </div>
         <div id="mobile-order-table" class="block md:hidden">
@@ -461,9 +473,17 @@
       class="flex flex-col px-7 h-72 justify-center gap-16 md:h-40 mt-28 text-white relative left-0 right-0 bottom-0 bg-mainBlue items-center md:justify-between lg:px-40 md:px-14 md:flex-row"
     >
       <div class="w-3/4 md:w-auto">
-        <select class="bg-caret-down w-full md:w-44 pl-4 py-2 pr-8 bg-paleBlue">
-          <option>English</option>
-        </select>
+        <div class="relative inline-flex self-center w-full">
+          <img
+            src="../assets/icons/caretDown.svg"
+            class="absolute right-0 top-1 p-2 w-9"
+          />
+          <select
+            class="appearance-none w-full md:w-44 pl-4 py-2 pr-8 bg-paleBlue"
+          >
+            <option>English</option>
+          </select>
+        </div>
       </div>
       <div class="text-right text-sm">
         <div id="footer-logo" class="flex justify-center md:justify-end mb-5">

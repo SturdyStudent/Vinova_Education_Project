@@ -1,16 +1,21 @@
-import React, {useState} from 'react'
-import {AppBar, Toolbar, Box, IconButton, Hidden, Drawer} from '@mui/material'
-import Logo from '../assets/img/main_logo.png'
+import React, { useState } from 'react';
+import { AppBar, Toolbar, Box, IconButton, Hidden, Drawer, Button, List, ListItem } from '@mui/material';
+import Logo from '../../assets/img/main_logo.png';
 import { makeStyles } from '@mui/styles';
-import MenuIcon from '@mui/icons-material/Menu'
-import CloseIcon from '@mui/icons-material/Close'
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+import { useTheme } from '@emotion/react';
 
 function Header() {
     const [openNavbar, setOpenNavbar] = useState();
+    const theme = useTheme();
 
     const useStyles = makeStyles(theme => ({
         headerHolder: {
             height: 'auto',
+            position: 'sticky !important',
+            top: '0',
+            boxSizing: 'border-box',
             [theme.breakpoints.down('md')]: {
                 padding: '0 30px',
                 height: '97px',
@@ -35,20 +40,24 @@ function Header() {
             },
         },
         navButtonHolder:{
-            display: 'block',
+            display: 'flex',
+            alignItems: 'center',
             [theme.breakpoints.down('md')]: {
                 display: 'none'
             },
         },
+        navButtonList: {
+            display:'flex'
+        },
         navButton: {
             border: 'none',
             color: `${theme.palette.primary.blue}`, 
-            marginLeft: "15px", 
-            marginRight: "15px", 
-            textTransform: 'none', 
+            textTransform: 'none !important', 
             backgroundColor: 'transparent',
+            maxWidth: 'none',
+            width: 'auto !important',
             [theme.breakpoints.up('xl')]: {
-                margin: '0 65px'
+                margin: '0 40px !important'
             },
         },
         drawerHeader: {
@@ -69,7 +78,7 @@ function Header() {
             marginRight: 0, 
             border: `1px solid #1F3684`, 
             borderRadius: '30px', 
-            padding: '10px 30px',
+            padding: '0px 30px !important',
             background: 'transparent',
             color: theme.palette.primary.blue
         }
@@ -89,24 +98,28 @@ function Header() {
     sx={{backgroundColor: 'white', boxShadow: 'none', position: 'relative'}}
     >
         <Toolbar className={classes.toolbar} >
-            <Box id="hamburger" sx={{display: 'none'}}>
-                <img src={Logo} width={'138px'} height={'21px'} alt='' />
-            </Box>
+       
             <Box 
             component={'div'}
             key={1}
-            sx={{flexGrow: 1, textAlign: 'left'}}
+            sx={{':hover': {cursor: 'pointer'}, flexGrow: 1, textAlign: 'left'}}
+            
             >
                 <img src={Logo} width={'138px'} height={'21px'} alt='' />
             </Box>
             <div className={classes.navButtonHolder}>
+                <List className={classes.navButtonList}>
+
                 {
                     navButtonList && navButtonList.map((item) => {
-                        return <button className={classes.navButton}>{item}</button>
+                        return <ListItem sx={{width: 'auto'}}>
+                            <Button className={classes.navButton}>{item}</Button>
+                        </ListItem> 
                     })
                 }
-                <button id="logout-btn" 
-                className={classes.navButton}  style={{marginRight: 0, border: `1px solid #1F3684`, borderRadius: '30px', padding: '10px 30px'}}>Logout</button>
+                </List>
+                <Button id="logout-btn" 
+                className={classes.navButton}  sx={{':hover': {background: theme.palette.primary.blue, color: 'white'}, marginRight: '0 !important', border: `1px solid #1F3684`, height: 'fit-content', borderRadius: '30px', padding: '10px 30px !important'}}>Logout</Button>
             </div>
             <Hidden mdUp> 
                 <IconButton onClick={() => setOpenNavbar(true)}>
@@ -129,7 +142,7 @@ function Header() {
                     <div>My Transactions</div>
                     <div>My Profile</div>
                     <hr style={{width: '100%', marginTop: '100px'}}  />
-                    <button className={classes.logoutButton} style={{width: '60%', padding: '20px 40px'}}>Logout</button>   
+                    <button className={classes.logoutButton} style={{ width: '60%', padding: '20px 40px'}}>Logout</button>   
                 </Box>
             </Box>
         </Drawer>

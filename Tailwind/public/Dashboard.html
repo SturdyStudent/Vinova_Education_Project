@@ -253,9 +253,17 @@
       class="flex flex-col px-7 h-72 justify-center gap-16 md:h-40 mt-28 text-white relative left-0 right-0 bottom-0 bg-mainBlue items-center md:justify-between lg:px-40 md:px-14 md:flex-row"
     >
       <div class="w-3/4 md:w-auto">
-        <select class="bg-caret-down w-full md:w-44 pl-4 py-2 pr-8 bg-paleBlue">
-          <option>English</option>
-        </select>
+        <div class="relative inline-flex self-center w-full">
+          <img
+            src="../assets/icons/caretDown.svg"
+            class="absolute right-0 top-1 p-2 w-9"
+          />
+          <select
+            class="appearance-none w-full md:w-44 pl-4 py-2 pr-8 bg-paleBlue appearance-none"
+          >
+            <option>English</option>
+          </select>
+        </div>
       </div>
       <div class="text-right text-sm">
         <div id="footer-logo" class="flex justify-center md:justify-end mb-5">
